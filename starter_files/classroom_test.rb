@@ -36,7 +36,6 @@ class ClassroomTest < Minitest::Test
   end
 
   def test_letter_grade
-    skip
     assert_equal "A", letter_grade(1000)
     assert_equal "A", letter_grade(92)
     assert_equal "B", letter_grade(84)
@@ -46,7 +45,6 @@ class ClassroomTest < Minitest::Test
   end
 
   def test_final_letter_grades
-    skip
     assert_equal "A", final_letter_grades(DATA)[:remy]
     assert_equal "B", final_letter_grades(DATA)[:kelly]
     assert_equal "B", final_letter_grades(DATA)[:indiana]

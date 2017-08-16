@@ -48,11 +48,23 @@ end
 # 60-69 => D
 # < 60 => F
 def letter_grade(score)
+  if score >= 90
+    "A"
+  elsif score >= 80 && score <= 89
+    "B"
+  elsif score >= 70 && score <= 79
+    "C"
+  elsif score >= 60 && score <= 69
+    "D"
+  else
+    "F"
+  end
 end
 
 # Return a hash of students and their final letter grade, as determined
 # by their average.
 def final_letter_grades(grade_hash)
+
 end
 
 # Return the average for the entire class.
