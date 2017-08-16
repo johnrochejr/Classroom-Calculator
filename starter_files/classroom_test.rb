@@ -16,7 +16,6 @@ DATA = {
 
 class ClassroomTest < Minitest::Test
   def test_averages
-    skip
     assert_equal 91, averages(DATA)[:remy]
     assert_equal 70, averages(DATA)[:dorian]
   end
