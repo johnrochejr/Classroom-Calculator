@@ -10,8 +10,6 @@ end
 # that assignment
 
 
-
-
 # Given a grade_hash and assignment number (as parameters),
 # return all scores for that assignment. Note that Ruby counts
 # arrays from 0, but we are referring to
@@ -23,14 +21,12 @@ def assignment_scores(grade_hash, assignment_num)
   grade_hash.map { |scores| scores[1] [assignment_num - 1] }
 end
 
-
-
-
-
 # Given a grade_hash and assignment number, return the average score for that
 # assignment. Note that Ruby counts arrays from 0, but we are referring to
 # them as 1-10.
 def assignment_average_score(grade_hash, assignment_num)
+  total_scores = grade_hash.map { |scores| scores[1] [assignment_num - 1] }
+  total_scores.sum / grade_hash.length
 end
 
 # Return a hash of students and their average score.
