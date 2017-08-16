@@ -16,6 +16,7 @@ DATA = {
 
 class ClassroomTest < Minitest::Test
   def test_averages
+    skip
     assert_equal 91, averages(DATA)[:remy]
     assert_equal 70, averages(DATA)[:dorian]
   end
@@ -36,6 +37,7 @@ class ClassroomTest < Minitest::Test
   end
 
   def test_letter_grade
+    skip
     assert_equal "A", letter_grade(1000)
     assert_equal "A", letter_grade(92)
     assert_equal "B", letter_grade(84)
@@ -45,6 +47,7 @@ class ClassroomTest < Minitest::Test
   end
 
   def test_final_letter_grades
+    skip
     assert_equal "A", final_letter_grades(DATA)[:remy]
     assert_equal "B", final_letter_grades(DATA)[:kelly]
     assert_equal "B", final_letter_grades(DATA)[:indiana]
@@ -52,10 +55,12 @@ class ClassroomTest < Minitest::Test
   end
 
   def test_class_average
+    skip
     assert_equal 74, class_average(DATA)
   end
 
   def test_top_students
+    skip
     assert_equal [:remy, :kelly, :indiana], top_students(DATA, 3)
     assert_equal [:remy, :kelly, :indiana, :ryan, :riley, :allison, :nevada, :dorian, :drew, :chase], top_students(DATA, 10)
   end

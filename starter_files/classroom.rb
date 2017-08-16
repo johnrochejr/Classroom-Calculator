@@ -1,14 +1,31 @@
 # Given a grade_hash, student name, and assignment number, return the score
 # for that student and assignment. Note that Ruby counts arrays from 0, but
 # we are referring to them as 1-10.
+
 def assignment_score(grade_hash, student, assignment_num)
+  grade_hash.select { |name| name == student } [student] [assignment_num - 1]
 end
 
-# Given a grade_hash and assignment number, return all scores for that
-# assignment. Note that Ruby counts arrays from 0, but we are referring to
+#  ^^^^ if argument equals a student's name, give me the grade and number of
+# that assignment
+
+
+
+
+# Given a grade_hash and assignment number (as parameters),
+# return all scores for that assignment. Note that Ruby counts
+# arrays from 0, but we are referring to
 # them as 1-10.
+
+# "Give me the scores of assignment 5" ... for example
+
 def assignment_scores(grade_hash, assignment_num)
+  grade_hash.map { |scores| scores[1] [assignment_num - 1] }
 end
+
+
+
+
 
 # Given a grade_hash and assignment number, return the average score for that
 # assignment. Note that Ruby counts arrays from 0, but we are referring to
